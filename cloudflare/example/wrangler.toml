@@ -14,8 +14,11 @@ new_sqlite_classes = ["PlaywrightMCP"]
 name = "MCP_OBJECT"
 class_name = "PlaywrightMCP"
 
-# Disable workers.dev domain and use only custom domains
+# Disable workers.dev domain and preview URLs, use only custom domains
 workers_dev = false
+
+[dev]
+host = "localhost"
 
 [[routes]]
 pattern = "mcp.playwright.demos.build"
