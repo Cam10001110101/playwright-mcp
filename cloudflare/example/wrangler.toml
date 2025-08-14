@@ -13,3 +13,18 @@ new_sqlite_classes = ["PlaywrightMCP"]
 [[durable_objects.bindings]]
 name = "MCP_OBJECT"
 class_name = "PlaywrightMCP"
+
+# Disable workers.dev domain and use only custom domains
+workers_dev = false
+
+[[routes]]
+pattern = "mcp.playwright.demos.build"
+custom_domain = true
+
+[[routes]]
+pattern = "mcp.playwright.mcpcentral.io"
+custom_domain = true
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
